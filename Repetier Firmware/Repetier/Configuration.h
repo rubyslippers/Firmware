@@ -7,7 +7,7 @@ Rostock MAX v3   = 5
 Hacker H2        = 6
 */
 // ### Define your Printer Model here! ###
-#define PRINTER 5
+#define PRINTER 2
 
 // SeeMeCNC Bowden w/PEEK barrel = 1
 // HE240 on ERIS w/accel probe   = 2
@@ -40,7 +40,7 @@ Hacker H2        = 6
 // ############################################################################################
 // ############ FW version info and build date for LCD and M115 string! #######################
 // ############################################################################################
-#define REPETIER_VERSION "0.92.2"
+#define REPETIER_VERSION "0.92.2 custom"
 #define FIRMWARE_DATE "20171204" // in date format yyyymmdd
 
 #ifndef CONFIGURATION_H
@@ -300,9 +300,12 @@ Hacker H2        = 6
 #define MOTOR_CURRENT {140,140,140,130,130}
 #endif
 #define HAVE_HEATED_BED 1
-#define INVERT_X_DIR 1
-#define INVERT_Y_DIR 0
-#define INVERT_Z_DIR 1
+
+//should change here for Rostock 2, should work
+#define INVERT_X_DIR 0
+#define INVERT_Y_DIR 1
+//original 1, made it 0 to invert Z axis  KL
+#define INVERT_Z_DIR 0
 #define DELTA_DIAGONAL_ROD 291.06  // ball cup arms
 #define DELTA_MAX_RADIUS 145.0
 #define PRINTER_RADIUS 200.0
